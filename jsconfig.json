@@ -21,9 +21,9 @@
     ],
     "baseUrl": "src",
     "paths": {
-      "@/containers": ["./containers"],
-      "@/components": ["./components"],
-      "@/redux": ["./store"],
+      "@/containers/*": ["./containers/*"],
+      "@/components/*": ["./components/*"],
+      "@/redux/*": ["./store/*"],
       "~": ["."]
     }
   },
