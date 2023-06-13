@@ -1,0 +1,15 @@
+{
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^react|prop-types$",
+    "^next",
+    "<THIRD_PARTY_MODULES>",
+    "^@/containers(.*)$",
+    "^@/components(.*)$",
+    "^@/redux(.*)$",
+    "^@/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
