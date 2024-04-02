@@ -1,0 +1,59 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "impliedStrict": true
+    }
+  },
+  "extends": ["next", "next/core-web-vitals", "airbnb", "prettier"],
+  "plugins": [
+    "prettier",
+    "cypress",
+    "html",
+    "import",
+    "jest",
+    "jsx-a11y",
+    "react",
+    "react-hooks",
+    "security",
+    "sonarjs",
+    "xss",
+    "tailwindcss"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".jsx", ".js"]
+      }
+    ],
+    "import/extensions": "off"
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.slice.js"],
+      // avoid state param assignment
+      "rules": { "no-param-reassign": ["error", { "props": false }] }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      },
+      "alias": {
+        "map": [
+          ["@/containers", "./src/containers"],
+          ["@/components", "./src/components"],
+          ["@/helpers", "./src/helpers"],
+          ["@/queries", "./src/queries"],
+          ["@/services", "./src/services"],
+          ["~", "./src"]
+        ],
+        "extensions": [".js", ".jsx", "json"]
+      }
+    }
+  }
+}
